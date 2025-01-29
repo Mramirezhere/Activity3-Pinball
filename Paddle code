@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PaddleScript : MonoBehaviour
+{
+    
+        public Vector3 runleft;
+     public Vector3 runright;
+
+    // Update is called once per frame
+    void Update()
+    {
+              if (Input.GetKey(KeyCode.A))
+      {
+        GetComponent<Transform>() .position += runleft;
+      }
+      if (Input.GetKey(KeyCode.D))
+      {
+        GetComponent<Transform>() .position += runright;
+      }
+    }
+}
