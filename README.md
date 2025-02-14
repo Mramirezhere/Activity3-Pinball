@@ -1,11 +1,12 @@
-This is the destroy script I
-                           V
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyScript : MonoBehaviour
 {
+    //someone people tried to help me with this script
     public GameObject GameManager;
     
     // Start is called before the first frame update
@@ -21,8 +22,8 @@ public class DestroyScript : MonoBehaviour
     }  
       
 }
-This is Score Script I
-                     V
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,7 +35,7 @@ public class ScoreScript : MonoBehaviour
     {
   
 
-
+        //Students helped me with this one 
         if(collision.gameObject.tag == "Bumper")
         {
             Score += 100;
@@ -42,8 +43,6 @@ public class ScoreScript : MonoBehaviour
     }
 }
 
-This is Paddle Script I
-                      V
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -51,19 +50,46 @@ using UnityEngine;
 public class PaddleScript : MonoBehaviour
 {
     
-        public Vector3 runleft;
-     public Vector3 runright;
+        public Vector3 rotateleft;
+     public Vector3 rotateright;
 
     // Update is called once per frame
     void Update()
     {
               if (Input.GetKey(KeyCode.A))
       {
-        GetComponent<Transform>() .position += runleft;
+        GetComponent<Transform>() .position += rotateleft;
       }
       if (Input.GetKey(KeyCode.D))
       {
-        GetComponent<Transform>() .position += runright;
+        GetComponent<Transform>() .position += rotateright;
       }
+    }
+}
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class LeaderBoardScript : MonoBehaviour
+{
+    private List<string> playerNames = new List<string>{"Miguel", "Greyson", "Jayleen", "Max", "Kyle"};
+    private List<int> playerScores = new List<int>{ 100, 200, 300, 400, 500 };
+
+    void Start()
+    {
+     
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+    
+void UpdateLeaderBoard()
+    {
+     for (int i = 0;  playerScores.Count; i++);{}
     }
 }
